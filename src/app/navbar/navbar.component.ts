@@ -22,7 +22,9 @@ export class NavbarComponent implements OnInit{
 
   ngOnInit(): void {
     this._TranslateService.use(this.lang);
-    this.updateHtmlAttributes();
+    if (isPlatformBrowser(this._PLATFORM_ID)) {
+      this.updateHtmlAttributes();
+    }
   }
 
   @HostListener('window:scroll') onScroll(){
