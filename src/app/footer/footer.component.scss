@@ -5,12 +5,22 @@ footer{
   background: linear-gradient(to top, #000000 0% 2%, $second-color, #000000), url('../../assets/image/about-image/about-bg.jpg');
   background-size: cover;
   background-position: center center;
+  p{
+    color: #ccc;
+  }
   .logo{
-    .logo-img{
-      width: 200px;
+    img{
+      width: 80px;
     }
-    p{
+    h5{
+      color: #fff;
+      font-weight: 600;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      letter-spacing: 5px;
+    }
+    span{
       color: #ccc;
+      letter-spacing: 5px;
     }
   }
   li{
@@ -19,11 +29,42 @@ footer{
   }
   .footer-icons{
     transition: all .3s;
+    .icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      font-size: 20px;
+      background-color: $mainColor;
+      color: #fff;
+      border-radius: 50%;
+      &:hover{
+        a{
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+  .footer-links{
+    a:hover{
+      color: $mainColor !important;
+    }
   }
   .footer-contact{
-    span{
+    i{
+      color: #fff;
+      font-size: 20px;
+      transition: all .3s;
+    }
+    a{
       font-size: 18px;
-      font-weight: 600;
+      &:hover{
+        i{
+          color: $mainColor;
+        }
+        color: $mainColor !important;
+      }
     }
   }
   .copy-right{

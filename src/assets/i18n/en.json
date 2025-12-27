@@ -1,6 +1,6 @@
 {
   "navbar": {
-    "title":"Tech2Earn",
+    "title":"AHTech",
     "home": "Home",
     "about": "About",
     "whyUs": "Why Choose Us",
@@ -11,17 +11,17 @@
   },
   "hero": {
     "title": "Smart software solutions to take your business into the future",
-    "subtitle": "Comprehensive web solutions, from websites and online stores to advanced ERP and POS systems, designed to grow your business.",
+    "subtitle": "Comprehensive web solutions, management systems, and advanced POS, along with smart mobile applications to simplify and grow your business efficiently.",
     "startNow": "Start Now",
     "learnMore": "Learn More"
   },
   "about": {
     "title": "About Us",
     "heading": "Innovative Designs. Smart Strategies. Real Impact.",
-    "text": "At 'Tech2Earn' we provide complete digital solutions that help businesses grow and thrive in the digital world. From engaging social media designs and custom websites and apps to powerful SEO strategies — we deliver every project with passion and precision.",
+    "text": "At 'AHTech', we provide comprehensive digital solutions that help businesses grow in the digital world, from custom website and app design, eye-catching social media content, to effective SEO strategies — every project we execute with passion and precision.",
     "text2": "We’re more than just a service provider — we’re your partner in digital success.",
     "contactUs" : "Contact Us",
-    "companyTitle": "Tech2Earn"
+    "companyTitle": "AHTech"
   },
   "whyUs": {
     "why":"Why",
@@ -73,14 +73,14 @@
   },
   "ourWork": {
     "title": "Our Work",
-    "project": "Tech2Earn"
+    "project": "AHTech"
   },
   "partners": {
     "title": "Our Partners"
   },
   "footer":{
     "info":{
-      "name": "Tech2Earn",
+      "name": "AHTech",
       "description": "We bring your brand to life with creative social media designs, custom websites, mobile apps, and SEO that drives results."
     },
     "services": {
@@ -97,21 +97,20 @@
         "Technical": "Technical Support & Maintenance"
       }
     },
-    "solutions": {
-      "title": "Solutions",
+    "Links": {
+      "title": "Links",
       "list": {
-        "Technical": "Technical Support Services",
-        "Infrastructure" : "Infrastructure Services",
-        "Network": "Network Telephony Solutions",
-        "Smart": "Smart resources",
-        "Digital" : "Digital Marketing"
+        "home": "Home",
+        "about": "About",
+        "whyUs": "Why Choose Us",
+        "features": "Features",
+        "ourWork": "Our Work",
+        "partners": "Our Partners"
       }
     },
     "contact": {
-      "phone": "+966559065802",
-      "email": "med.abdelkader@2earn.cash",
-      "address": "Minarat Al-Ma'rifah Building No. 402, Third Floor - King Abdulaziz University - Jeddah",
-      "footer": "Tech2Earn Team © 2025"
+      "address": "Cairo, Egypt",
+      "footer": "AHTech Team © 2025"
     }
   }
 }

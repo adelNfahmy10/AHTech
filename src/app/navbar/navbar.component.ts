@@ -1,6 +1,6 @@
-import { isPlatformBrowser, NgClass, NgFor, NgStyle } from '@angular/common';
-import { Component, HostListener, inject, PLATFORM_ID } from '@angular/core';
-import { TranslateDirective, TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { isPlatformBrowser, NgClass, NgStyle } from '@angular/common';
+import { Component, HostListener, inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +9,7 @@ import { TranslateDirective, TranslateModule, TranslatePipe, TranslateService } 
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
-export class NavbarComponent{
+export class NavbarComponent implements OnInit{
   private readonly _PLATFORM_ID = inject(PLATFORM_ID)
   private readonly _TranslateService = inject(TranslateService)
 
@@ -18,9 +18,11 @@ export class NavbarComponent{
   background:string = 'transparent'
   lastScrollTop = 0;
   isNavbarVisible = true;
+  lang: string =  'ar';
 
-  constructor(){
+  ngOnInit(): void {
     this._TranslateService.use(this.lang);
+    this.updateHtmlAttributes();
   }
 
   @HostListener('window:scroll') onScroll(){
@@ -84,15 +86,16 @@ export class NavbarComponent{
   }
 
   // Translation Code
-  lang: string =  'en';
   switchLang() {
     this.lang = this.lang === 'en' ? 'ar' : 'en';
+    localStorage.setItem('lang', this.lang);
     this._TranslateService.use(this.lang);
+    this.updateHtmlAttributes();
+  }
+
+  updateHtmlAttributes() {
     const htmlTag = document.documentElement;
-    if (this.lang === 'en') { htmlTag.setAttribute('dir', 'ltr');
-      htmlTag.setAttribute('lang', 'en');
-    } else { htmlTag.setAttribute('dir', 'rtl');
-      htmlTag.setAttribute('lang', 'ar');
-    }
+    htmlTag.setAttribute('dir', this.lang === 'ar' ? 'rtl' : 'ltr');
+    htmlTag.setAttribute('lang', this.lang);
   }
 }

@@ -10,4 +10,10 @@ import { TranslatePipe } from '@ngx-translate/core';
   schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AboutComponent {
+  scrollToSection(sectionId: string) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

@@ -9,7 +9,9 @@ import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes, withInMemoryScrolling({scrollPositionRestoration:'top'}), withViewTransitions()),
+  providers: [
+    provideRouter(routes, withInMemoryScrolling({scrollPositionRestoration:'top'}),
+    withViewTransitions()),
     provideClientHydration(),
     provideHttpClient(withFetch()),
     provideAnimations(),
